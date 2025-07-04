@@ -4,6 +4,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -109,5 +110,23 @@ public class JphStepdefinitions {
         Assert.assertEquals(id,(Integer)responseJP.getInt("id"));
     }
 
+
+    @When("Put request icin {string},{string},{int} {int} bilgiler ile request body olusturur")
+    public void put_request_icin_bilgiler_ile_request_body_olusturur(String string, String string2, Integer int1, Integer int2) {
+        request = new JSONObject();
+        request.put("title", "Ipek");
+        request.put("body", "Sozbir");
+        request.put("userId", 10);
+        request.put("id", 70);
+    }
+
+
+    @And("jPH server'a PUT request gonderir ve testleri yapmak icin response degerini kaydeder")
+    public void jphServerAPUTRequestGonderirVeTestleriYapmakIcinResponseDegeriniKaydeder() {
+        response =given().contentType(ContentType.JSON)
+            .when().body(request.toString())
+            .put(endPoint);
+        response.prettyPrint();
+    }
 
 }
