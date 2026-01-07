@@ -78,7 +78,7 @@ Bu yapı sayesinde ortam değişiklikleri koddan bağımsız yönetilebilir.
 ### Kurulum ve Çalıştırma
 Repository'i klonlayın:
 ```
-git clone https://github.com/kilicCeren/ApiTestAutomationWithCucumber.git
+git clone https://github.com/IpekSozbir/ApiTestAutomationWithCucumber.git
 cd ApiTestAutomationWithCucumber
 ```
 Testleri çalıştırın:
@@ -213,7 +213,7 @@ This structure allows environment changes to be managed independently of the cod
 Clone the repository:
 
 ```
-git clone https://github.com/kilicCeren/ApiTestAutomationWithCucumber.git
+git clone https://github.com/IpekSozbir/ApiTestAutomationWithCucumber.git
 cd ApiTestAutomationWithCucumber
 ```
 
